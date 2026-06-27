@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+instance/
+.pytest_cache/
+.ruff_cache/
+
+# Personal, machine-local Claude Code overrides — never commit
+.claude/settings.local.json
