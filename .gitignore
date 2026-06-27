@@ -8,3 +8,6 @@ instance/
 
 # Personal, machine-local Claude Code overrides — never commit
 .claude/settings.local.json
+
+# git worktrees created by the build-app workflow
+.claude/worktrees/
