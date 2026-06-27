@@ -21,8 +21,13 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # track_progress makes the action create a sticky tracking comment and
+          # publish a proper PR review (summary + inline comments). Without it,
+          # a bare prompt runs but often posts nothing ("No buffered inline comments").
+          track_progress: true
           prompt: |
             Review this pull request for bugs, security issues (especially SQL
             injection and auth/credential leaks), missing tests, and code quality.
-            Follow the conventions in the repo's .claude/skills. Leave concise
-            inline comments and a short summary. Be specific with file:line.
+            Follow the conventions in the repo's .claude/skills.
+            Post a brief overall summary as a PR comment, and leave inline comments
+            on specific lines where you find issues. Be specific with file:line.
