@@ -24,6 +24,7 @@ def create_app(test_config: dict | None = None) -> Flask:
     os.makedirs(app.instance_path, exist_ok=True)
 
     # Register routes and lifecycle hooks.
+    from .account import bp as account_bp
     from .auth import bp as auth_bp
     from .stats import bp as stats_bp
     from .version_routes import bp as version_bp
@@ -31,6 +32,7 @@ def create_app(test_config: dict | None = None) -> Flask:
     app.register_blueprint(auth_bp)
     app.register_blueprint(version_bp)
     app.register_blueprint(stats_bp)
+    app.register_blueprint(account_bp)
     app.teardown_appcontext(db.close_db)
 
     # Ensure the schema exists before the first request.
