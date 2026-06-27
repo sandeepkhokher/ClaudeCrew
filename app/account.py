@@ -26,6 +26,9 @@ def delete_account():
         # which usernames exist.
         return jsonify({"error": "invalid credentials"}), 401
 
+    # SQLite has foreign keys off by default, so ON DELETE CASCADE won't fire —
+    # remove the user's reset tokens explicitly to avoid orphaned, redeemable rows.
+    db.execute("DELETE FROM password_reset_tokens WHERE user_id = ?", (user["id"],))
     db.execute("DELETE FROM users WHERE username = ?", (data["username"],))
     db.commit()
     return jsonify({"message": "account deleted"}), 200
