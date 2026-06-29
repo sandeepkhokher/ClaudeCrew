@@ -107,4 +107,3 @@ action usage at https://github.com/anthropics/claude-code-action.)
 - Tighten `permissions` in `.claude/settings.json` and expand the hook guards.
 - Swap SQLite for Postgres, add auth tokens/sessions, and grow the test suite.
 
-See `docs/PLAN.md` for the full design rationale.
