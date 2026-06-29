@@ -9,7 +9,7 @@
 
 set -euo pipefail
 
-SESSION="idealclaude"
+SESSION="claudecrew"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
