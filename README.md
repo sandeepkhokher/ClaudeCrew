@@ -5,8 +5,7 @@ capabilities. It pairs a small but real **Flask Auth API** with a full **agent t
 **skills**, **slash commands**, **safety hooks**, a **GitHub PR + auto-review pipeline**,
 and a **tmux dashboard** for watching the agents work.
 
-Everything for this project — code, agent config, docs, and the original plan
-(`docs/PLAN.md`) — lives in this directory so you can copy it into production projects.
+Everything for this project — code, agent config, docs — lives in this directory so you can copy it into production projects.
 
 ---
 
@@ -39,7 +38,6 @@ ClaudeCrew/
 │   └── settings.json         # permissions + hooks wiring
 ├── .github/workflows/        # ci.yml, claude-code-review.yml, claude.yml
 ├── scripts/agent-dashboard.sh# tmux multi-pane dashboard
-├── docs/PLAN.md              # the original design plan
 └── CLAUDE.md                 # project memory for Claude Code
 ```
 
