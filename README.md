@@ -1,4 +1,4 @@
-# idealClaude — an ideal Claude Code agentic setup
+# ensemble — an ideal Claude Code agentic setup
 
 A self-contained, extensible example of getting the most out of Claude Code's agentic
 capabilities. It pairs a small but real **Flask Auth API** with a full **agent team**,
@@ -28,7 +28,7 @@ Open Claude Code here (`claude`) and the agents, skills, commands, and hooks loa
 ## 2. What's in the box
 
 ```
-idealClaude/
+ensemble/
 ├── app/                      # Flask Auth API (factory, db, security, auth blueprint)
 ├── tests/                    # pytest suite (isolated temp-SQLite per test)
 ├── .claude/

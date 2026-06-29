@@ -2,7 +2,7 @@
 
 ## Context
 
-You want a reference-quality Claude Code project in `idealClaude/` that shows off the full
+You want a reference-quality Claude Code project in `ensemble/` that shows off the full
 agentic workflow: a **main agent acting as team lead** that dispatches **specialized subagents**
 (architect, builder, tester, reviewer, debugger) which you can watch run in parallel, plus
 **custom skills**, **slash commands**, **hooks**, a **GitHub PR + auto-review pipeline**, and a
@@ -16,7 +16,7 @@ Decisions locked in (via clarifying questions):
 - **GitHub:** init git here and create a new repo via `gh`, then run the real PR pipeline.
 - **Visualization:** both Claude Code's built-in subagent progress (`/workflows`) and a tmux dashboard.
 
-Environment facts discovered: `idealClaude/` is empty and not a git repo; `gh`, `tmux`, `node` are
+Environment facts discovered: `ensemble/` is empty and not a git repo; `gh`, `tmux`, `node` are
 NOT installed; Python 3.12.6 IS installed.
 
 ---
@@ -38,7 +38,7 @@ python3 -m venv .venv && source .venv/bin/activate
 A minimal but realistic Flask auth service so tests/reviews/CI have something real to chew on.
 
 ```
-idealClaude/
+ensemble/
 ├── app/
 │   ├── __init__.py        # Flask app factory: create_app()
 │   ├── db.py              # sqlite3 connection + init_db() schema (users table)

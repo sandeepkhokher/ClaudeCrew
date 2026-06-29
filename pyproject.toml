@@ -1,5 +1,5 @@
 [project]
-name = "ideal-claude-auth-api"
+name = "ensemble-auth-api"
 version = "0.1.0"
 description = "Flask Auth API demo for an ideal Claude Code agentic setup"
 requires-python = ">=3.12"
